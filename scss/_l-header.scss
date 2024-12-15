@@ -1,2 +1,285 @@
 .header {
+  padding: 30px 0;
+  background-color: #ffffff;
+
+  @include laptop {
+    padding: 20px 0;
+  }
+
+  @include mobile {
+    padding: 15px 0;
+  }
+
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    @include laptop {
+      gap: 15px 25px;
+    }
+
+    @include tabletsm {
+      flex-wrap: wrap;
+      gap: 15px 20px;
+    }
+  }
+
+  &__burger {
+    flex: 0 0 auto;
+
+    &-button {
+      display: block;
+      width: 35px;
+      padding: 0;
+      aspect-ratio: 1 / 1;
+      border: none;
+      background: url(../assets/hamburger.svg) center / cover no-repeat;
+      transition: filter ease-in-out 0.2s;
+      cursor: pointer;
+
+      @include laptop {
+        width: 25px;
+      }
+
+      @include mobile {
+        width: 20px;
+      }
+
+      &:hover {
+        filter: brightness(110%);
+      }
+    }
+  }
+
+  &__location {
+    position: relative;
+    flex: 0 0 auto;
+    max-width: 180px;
+
+    @include laptop {
+      max-width: 162px;
+    }
+
+    @include mobilesm {
+      max-width: 120px;
+    }
+
+    &-button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      max-width: 100%;
+      padding: 0;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 100%;
+      color: #0c0c0e;
+      text-align: left;
+      border: none;
+      background-color: rgba($color: $white, $alpha: 0);
+      transition: color ease-in-out 0.2s;
+      cursor: pointer;
+
+      @include laptop {
+        gap: 6px;
+        font-size: 13px;
+      }
+
+      &:hover {
+        color: #d31d1d;
+      }
+
+      &::before {
+        content: '';
+        flex: 0 0 auto;
+        display: block;
+        width: 22px;
+        padding: 0;
+        aspect-ratio: 1 / 1;
+        border: none;
+        background: url(../assets/geo.svg) center / cover no-repeat;
+
+        @include laptop {
+          width: 16px;
+        }
+      }
+
+      &-city {
+        display: inline-block;
+        max-width: calc(100% - 30px);
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        @include laptop {
+          max-width: calc(100% - 22px);
+        }
+      }
+    }
+  }
+
+  &__search {
+    flex: 1 1 auto;
+
+    @include tabletsm {
+      flex: 1 1 100%;
+      order: 100;
+    }
+
+    &-form {
+      position: relative;
+
+      &-input {
+        display: block;
+        width: 100%;
+        padding: 13px 56px 13px 20px;
+        box-sizing: border-box;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        color: #0c0c0e;
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        outline: none;
+
+        @include laptop {
+          font-size: 14px;
+        }
+
+        @include mobile {
+          padding: 10px 46px 10px 15px;
+          font-size: 13px;
+        }
+
+        &::placeholder {
+          color: #cccccc;
+        }
+
+        &::-webkit-search-decoration,
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-results-button,
+        &::-webkit-search-results-decoration {
+          -webkit-appearance: none;
+        }
+      }
+
+      &-button {
+        position: absolute;
+        top: 7px;
+        right: 10px;
+        bottom: 7px;
+        display: block;
+        aspect-ratio: 1 / 1;
+        padding: 0;
+        aspect-ratio: 1 / 1;
+        border: none;
+        background: url(../assets/search_icon.svg) center / 16px no-repeat;
+        cursor: pointer;
+
+        @include mobile {
+          top: 3px;
+          bottom: 3px;
+        }
+      }
+    }
+  }
+
+  &__basket {
+    flex: 0 0 auto;
+
+    &-button {
+      display: flex;
+      align-items: center;
+      padding: 18px 30px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      color: #fff;
+      border: 1px solid rgba($color: #d31d1d, $alpha: 0);
+      border-radius: 40px;
+      background-color: #db2222;
+      transition-property: color, border, background-color, filter;
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.2s;
+      cursor: pointer;
+
+      @include laptop {
+        padding: 18px 25px;
+        font-size: 13px;
+      }
+
+      @include tabletsm {
+        padding: 11px 20px;
+      }
+
+      &:hover {
+        color: #d31d1d;
+        border-color: rgba($color: #d31d1d, $alpha: 1);
+        background-color: #ffffff;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        width: 14px;
+        margin-right: 5px;
+        padding: 0;
+        aspect-ratio: 1 / 1;
+        border: none;
+        background: url(../assets/basket.svg) center / cover no-repeat;
+        transition-property: inherit;
+        transition-timing-function: inherit;
+        transition-duration: inherit;
+        filter: brightness(1000%);
+
+        @include laptop {
+          width: 14px;
+        }
+      }
+
+      &:hover::before {
+        filter: brightness(100%);
+      }
+
+      &-text {
+        @include laptop {
+          display: none;
+        }
+      }
+
+      &-price {
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__telegram {
+    flex: 0 0 auto;
+
+    &-link {
+      display: block;
+      width: 50px;
+      aspect-ratio: 1 / 1;
+      background: url(../assets/telegram-logo.svg) center / cover no-repeat;
+      transition: filter ease-in-out 0.2s;
+      filter: grayscale(100%);
+      cursor: pointer;
+
+      @include laptop {
+        width: 42px;
+      }
+
+      @include mobile {
+        width: 34px;
+      }
+
+      &:hover {
+        filter: grayscale(0%);
+      }
+    }
+  }
 }

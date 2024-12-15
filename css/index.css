@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
 html {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
@@ -10,8 +11,8 @@ body {
   position: relative;
   margin: 0;
   overflow-y: scroll;
-  color: #181d42;
-  background-color: #ffffff;
+  color: #0c0c0e;
+  background-color: #eef1f4;
 }
 
 a,
@@ -32,9 +33,295 @@ img {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1188px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 36px;
   box-sizing: border-box;
+}
+@media (max-width: 680px) {
+  .container {
+    padding: 0 12px;
+  }
+}
+
+.header {
+  padding: 30px 0;
+  background-color: #ffffff;
+}
+@media (max-width: 992px) {
+  .header {
+    padding: 20px 0;
+  }
+}
+@media (max-width: 576px) {
+  .header {
+    padding: 15px 0;
+  }
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+@media (max-width: 992px) {
+  .header .container {
+    gap: 15px 25px;
+  }
+}
+@media (max-width: 680px) {
+  .header .container {
+    flex-wrap: wrap;
+    gap: 15px 20px;
+  }
+}
+.header__burger {
+  flex: 0 0 auto;
+}
+.header__burger-button {
+  display: block;
+  width: 35px;
+  padding: 0;
+  aspect-ratio: 1/1;
+  border: none;
+  background: url(../assets/hamburger.svg) center/cover no-repeat;
+  transition: filter ease-in-out 0.2s;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .header__burger-button {
+    width: 25px;
+  }
+}
+@media (max-width: 576px) {
+  .header__burger-button {
+    width: 20px;
+  }
+}
+.header__burger-button:hover {
+  filter: brightness(110%);
+}
+.header__location {
+  position: relative;
+  flex: 0 0 auto;
+  max-width: 180px;
+}
+@media (max-width: 992px) {
+  .header__location {
+    max-width: 162px;
+  }
+}
+@media (max-width: 400px) {
+  .header__location {
+    max-width: 120px;
+  }
+}
+.header__location-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  padding: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #0c0c0e;
+  text-align: left;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  transition: color ease-in-out 0.2s;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .header__location-button {
+    gap: 6px;
+    font-size: 13px;
+  }
+}
+.header__location-button:hover {
+  color: #d31d1d;
+}
+.header__location-button::before {
+  content: "";
+  flex: 0 0 auto;
+  display: block;
+  width: 22px;
+  padding: 0;
+  aspect-ratio: 1/1;
+  border: none;
+  background: url(../assets/geo.svg) center/cover no-repeat;
+}
+@media (max-width: 992px) {
+  .header__location-button::before {
+    width: 16px;
+  }
+}
+.header__location-button-city {
+  display: inline-block;
+  max-width: calc(100% - 30px);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media (max-width: 992px) {
+  .header__location-button-city {
+    max-width: calc(100% - 22px);
+  }
+}
+.header__search {
+  flex: 1 1 auto;
+}
+@media (max-width: 680px) {
+  .header__search {
+    flex: 1 1 100%;
+    order: 100;
+  }
+}
+.header__search-form {
+  position: relative;
+}
+.header__search-form-input {
+  display: block;
+  width: 100%;
+  padding: 13px 56px 13px 20px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #0c0c0e;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  outline: none;
+}
+@media (max-width: 992px) {
+  .header__search-form-input {
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .header__search-form-input {
+    padding: 10px 46px 10px 15px;
+    font-size: 13px;
+  }
+}
+.header__search-form-input::-moz-placeholder {
+  color: #cccccc;
+}
+.header__search-form-input::placeholder {
+  color: #cccccc;
+}
+.header__search-form-input::-webkit-search-decoration, .header__search-form-input::-webkit-search-cancel-button, .header__search-form-input::-webkit-search-results-button, .header__search-form-input::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+.header__search-form-button {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  bottom: 7px;
+  display: block;
+  aspect-ratio: 1/1;
+  padding: 0;
+  aspect-ratio: 1/1;
+  border: none;
+  background: url(../assets/search_icon.svg) center/16px no-repeat;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .header__search-form-button {
+    top: 3px;
+    bottom: 3px;
+  }
+}
+.header__basket {
+  flex: 0 0 auto;
+}
+.header__basket-button {
+  display: flex;
+  align-items: center;
+  padding: 18px 30px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  color: #fff;
+  border: 1px solid rgba(211, 29, 29, 0);
+  border-radius: 40px;
+  background-color: #db2222;
+  transition-property: color, border, background-color, filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .header__basket-button {
+    padding: 18px 25px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 680px) {
+  .header__basket-button {
+    padding: 11px 20px;
+  }
+}
+.header__basket-button:hover {
+  color: #d31d1d;
+  border-color: #d31d1d;
+  background-color: #ffffff;
+}
+.header__basket-button::before {
+  content: "";
+  display: block;
+  width: 14px;
+  margin-right: 5px;
+  padding: 0;
+  aspect-ratio: 1/1;
+  border: none;
+  background: url(../assets/basket.svg) center/cover no-repeat;
+  transition-property: inherit;
+  transition-timing-function: inherit;
+  transition-duration: inherit;
+  filter: brightness(1000%);
+}
+@media (max-width: 992px) {
+  .header__basket-button::before {
+    width: 14px;
+  }
+}
+.header__basket-button:hover::before {
+  filter: brightness(100%);
+}
+@media (max-width: 992px) {
+  .header__basket-button-text {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .header__basket-button-price {
+    display: none;
+  }
+}
+.header__telegram {
+  flex: 0 0 auto;
+}
+.header__telegram-link {
+  display: block;
+  width: 50px;
+  aspect-ratio: 1/1;
+  background: url(../assets/telegram-logo.svg) center/cover no-repeat;
+  transition: filter ease-in-out 0.2s;
+  filter: grayscale(100%);
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .header__telegram-link {
+    width: 42px;
+  }
+}
+@media (max-width: 576px) {
+  .header__telegram-link {
+    width: 34px;
+  }
+}
+.header__telegram-link:hover {
+  filter: grayscale(0%);
 }

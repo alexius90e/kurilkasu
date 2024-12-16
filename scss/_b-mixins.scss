@@ -29,7 +29,7 @@
 }
 
 @mixin mobilesm {
-  @media (max-width: 400px) {
+  @media (max-width: 359.9px) {
     @content;
   }
 }

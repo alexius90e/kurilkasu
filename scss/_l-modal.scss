@@ -44,6 +44,7 @@
 
   &__content {
     max-height: calc(100dvh - 140px);
+    padding-right: 10px;
     overflow: auto;
 
     @include laptop {
@@ -81,12 +82,14 @@
     cursor: pointer;
 
     @include laptop {
+      top: 30px;
+      right: 38px;
       width: 16px;
     }
 
     @include mobile {
-      top: 30px;
-      right: 20px;
+      top: 20px;
+      right: 14px;
       width: 12px;
     }
   }

@@ -111,19 +111,30 @@ if (headerBasketButton)
 
 const chooseCityButton = document.querySelector('.header__location-modal-buttons-choose');
 
-if (chooseCityButton)
-  chooseCityButton.addEventListener('click', () => openModal(modals.city));
+if (chooseCityButton) chooseCityButton.addEventListener('click', () => openModal(modals.city));
 
 const basketOrderButton = document.querySelector('.modal-basket__controls-order');
 
-if (basketOrderButton) basketOrderButton.addEventListener('click', () => {
-  closeModal(modals.basket)
-  openModal(modals.order)
-});
+if (basketOrderButton)
+  basketOrderButton.addEventListener('click', () => {
+    closeModal(modals.basket);
+    openModal(modals.order);
+  });
 
 const orderSubmitButton = document.querySelector('.modal-order__form-submit-button');
 
-if (orderSubmitButton) orderSubmitButton.addEventListener('click', () => {
-  closeModal(modals.order)
-  openModal(modals.thanks)
+if (orderSubmitButton)
+  orderSubmitButton.addEventListener('click', () => {
+    closeModal(modals.order);
+    openModal(modals.thanks);
+  });
+
+window.addEventListener('scroll', () => {
+  const backLink = document.querySelector('.main__back-link');
+
+  if (window.scrollY > 1000) {
+    if (backLink) backLink.classList.remove('hidden');
+  } else {
+    if (backLink) backLink.classList.add('hidden');
+  }
 });

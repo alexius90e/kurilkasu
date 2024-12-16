@@ -5,7 +5,43 @@
     padding: 30px 0 40px;
   }
 
-  @include mobile {
+  @include mobile { 
     padding: 20px 0 30px;
+  }
+
+  &__back {
+    &-link {
+      position: fixed;
+      bottom: 60px;
+      right: 100px;
+      z-index: 100;
+      display: block;
+      width: 70px;
+      aspect-ratio: 1 / 1;
+      border-radius: 70px;
+      background: url(../assets/arrow-top.svg) center / 16px no-repeat;
+      background-color: #d31d1d;
+      opacity: 1;
+      transition: opacity ease-in-out 0.2s;
+
+      @include laptop {
+        right: 20px;
+        width: 40px;
+        background-size: 12px;
+      }
+    
+      @include mobile { 
+        right: 6px;
+        bottom: 40px;
+        width: 30px;
+        background-size: 8px;
+
+      }
+
+      &.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
   }
 }

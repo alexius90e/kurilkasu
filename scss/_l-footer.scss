@@ -1,2 +1,79 @@
 .footer {
+  padding: 30px 0;
+  background-color: #ffffff;
+
+  @include laptop {
+    padding: 20px 0;
+  }
+
+  @include mobile {
+    padding: 15px 0;
+  }
+
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 55px;
+
+    @include laptop {
+      gap: 10px 30px;
+    }
+
+    @include mobile {
+      gap: 10px 20px;
+    }
+
+    &-link {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 100%;
+      color: #0c0c0e;
+      transition: all ease-in-out 0.2s;
+
+      @include laptop {
+        font-size: 15px;
+      }
+
+      @include mobile {
+        font-size: 14px;
+      }
+
+      &:hover {
+        color: #d31d1d;
+      }
+    }
+  }
+
+  &__telegram {
+    flex: 0 0 auto;
+
+    &-link {
+      display: block;
+      width: 50px;
+      aspect-ratio: 1 / 1;
+      background: url(../assets/telegram-logo.svg) center / cover no-repeat;
+      transition: filter ease-in-out 0.2s;
+      filter: grayscale(100%);
+      cursor: pointer;
+
+      @include laptop {
+        width: 42px;
+      }
+
+      @include mobile {
+        width: 34px;
+      }
+
+      &:hover {
+        filter: grayscale(0%);
+      }
+    }
+  }
 }

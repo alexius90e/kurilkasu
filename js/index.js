@@ -74,3 +74,34 @@ searchResultCards.forEach((card) => {
     });
   }
 });
+
+///
+
+const modals = {
+  basket: 'modal-basket',
+};
+
+const modalElements = document.querySelectorAll('.modal');
+
+modalElements.forEach((modal) =>
+  modal.addEventListener('click', (event) => {
+    const isLayout = event.target === event.currentTarget;
+    const isClose = event.target.classList.contains('modal__close');
+    if (isLayout || isClose) event.currentTarget.classList.remove('active');
+  })
+);
+
+function openModal(modalClassName) {
+  const modal = document.querySelector(`.${modalClassName}`);
+  if (modal) modal.classList.add('active');
+}
+
+function closeModal(modalClassName) {
+  const modal = document.querySelector(`.${modalClassName}`);
+  if (modal) modal.classList.remove('active');
+}
+
+const headerBasketButton = document.querySelector('.header__basket-button');
+
+if (headerBasketButton)
+  headerBasketButton.addEventListener('click', () => openModal(modals.basket));

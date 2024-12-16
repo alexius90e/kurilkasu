@@ -529,24 +529,75 @@
       </div>
     </footer>
 
-    <div class="modal">
+    <div class="modal modal-basket">
       <div class="modal__body">
         <div class="modal__content">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem reprehenderit cum facere temporibus ab enim architecto illo excepturi ea recusandae!</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem reprehenderit cum facere temporibus ab enim architecto illo excepturi ea recusandae!</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem reprehenderit cum facere temporibus ab enim architecto illo excepturi ea recusandae!</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem reprehenderit cum facere temporibus ab enim architecto illo excepturi ea recusandae!</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem reprehenderit cum facere temporibus ab enim architecto illo excepturi ea recusandae!</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem reprehenderit cum facere temporibus ab enim architecto illo excepturi ea recusandae!</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem reprehenderit cum facere temporibus ab enim architecto illo excepturi ea recusandae!</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem reprehenderit cum facere temporibus ab enim architecto illo excepturi ea recusandae!</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem reprehenderit cum facere temporibus ab enim architecto illo excepturi ea recusandae!</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem reprehenderit cum facere temporibus ab enim architecto illo excepturi ea recusandae!</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem reprehenderit cum facere temporibus ab enim architecto illo excepturi ea recusandae!</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem reprehenderit cum facere temporibus ab enim architecto illo excepturi ea recusandae!</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem reprehenderit cum facere temporibus ab enim architecto illo excepturi ea recusandae!</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem reprehenderit cum facere temporibus ab enim architecto illo excepturi ea recusandae!</p>
+          <h3 class="modal-basket__title">Корзина</h3>
+
+          <div class="modal-basket__list">
+            <div class="modal-basket__list-item">
+              <figure class="modal-basket__list-item-figure">
+                <img
+                  class="modal-basket__list-item-figure-image"
+                  src="./assets/cigarette-1.webp"
+                  alt="cigarette"
+                />
+              </figure>
+
+              <div class="modal-basket__list-item-info">
+                <div class="modal-basket__list-item-info-name">Сигареты Хортица Красная</div>
+                <div class="modal-basket__list-item-info-price">75.00 руб.</div>
+                <div class="modal-basket__list-item-info-controls">
+                  <div class="modal-basket__list-item-info-quantity">
+                    <button class="modal-basket__list-item-info-quantity-minus">-</button>
+                    <span class="modal-basket__list-item-info-quantity-count">10</span>
+                    <button class="modal-basket__list-item-info-quantity-plus">+</button>
+                  </div>
+
+                  <button class="modal-basket__list-item-info-delete">Удалить</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-basket__list-item">
+              <figure class="modal-basket__list-item-figure">
+                <img
+                  class="modal-basket__list-item-figure-image"
+                  src="./assets/cigarette-3.webp"
+                  alt="cigarette"
+                />
+              </figure>
+
+              <div class="modal-basket__list-item-info">
+                <div class="modal-basket__list-item-info-name">
+                  Сигареты Lucky Strike Compact Bright
+                </div>
+                <div class="modal-basket__list-item-info-price">75.00 руб.</div>
+                <div class="modal-basket__list-item-info-controls">
+                  <div class="modal-basket__list-item-info-quantity">
+                    <button class="modal-basket__list-item-info-quantity-minus">-</button>
+                    <span class="modal-basket__list-item-info-quantity-count">10</span>
+                    <button class="modal-basket__list-item-info-quantity-plus">+</button>
+                  </div>
+
+                  <button class="modal-basket__list-item-info-delete">Удалить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-basket__bottom">
+            <div class="modal-basket__total">Итого: 1 450 руб.</div>
+
+            <div class="modal-basket__controls">
+              <button class="modal-basket__controls-clear">Очистить корзину</button>
+              <button class="modal-basket__controls-order">Оформить заказ</button>
+              <button class="modal-basket__controls-back">Вернуться</button>
+            </div>
+          </div>
         </div>
+
+        <div class="modal__close" role="button"></div>
       </div>
     </div>
   </body>

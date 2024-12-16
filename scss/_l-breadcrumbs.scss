@@ -1,0 +1,33 @@
+.breadcrumbs {
+  &__link,
+  &__current {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+
+    @include laptop {
+      font-size: 13px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    color: #0c0c0e;
+    transition: color ease-in-out 0.2s;
+
+    &:hover {
+      color: #d31d1d;
+    }
+
+    &::after {
+      content: '/';
+      display: inline-block;
+      margin: 0 8px;
+      color: #777777;
+    }
+  }
+
+  &__current {
+    color: #777777;
+  }
+}

@@ -640,3 +640,45 @@ img {
 .header__telegram-link:hover {
   filter: grayscale(0%);
 }
+
+.main {
+  padding: 50px 0 60px;
+}
+@media (max-width: 992px) {
+  .main {
+    padding: 30px 0 40px;
+  }
+}
+@media (max-width: 576px) {
+  .main {
+    padding: 20px 0 30px;
+  }
+}
+
+.breadcrumbs__link, .breadcrumbs__current {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+}
+@media (max-width: 992px) {
+  .breadcrumbs__link, .breadcrumbs__current {
+    font-size: 13px;
+  }
+}
+.breadcrumbs__link {
+  display: inline-block;
+  color: #0c0c0e;
+  transition: color ease-in-out 0.2s;
+}
+.breadcrumbs__link:hover {
+  color: #d31d1d;
+}
+.breadcrumbs__link::after {
+  content: "/";
+  display: inline-block;
+  margin: 0 8px;
+  color: #777777;
+}
+.breadcrumbs__current {
+  color: #777777;
+}

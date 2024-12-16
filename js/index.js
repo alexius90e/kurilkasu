@@ -47,3 +47,30 @@ if (headerLocation) {
     if (isButtonChoose) headerLocation.classList.remove('active');
   });
 }
+
+///
+
+const searchResultCards = document.querySelectorAll('.search-result__card');
+
+searchResultCards.forEach((card) => {
+  const slider = card.querySelector('.swiper');
+  if (slider) {
+    const swiper = new Swiper(slider, {
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    });
+  }
+});

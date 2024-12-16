@@ -2234,3 +2234,205 @@ img {
   border-color: #0c0c0e;
   background-color: #0c0c0e;
 }
+
+.modal-city__title {
+  margin: 0 0 30px;
+  padding: 0 30px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 150%;
+  text-align: center;
+  color: #0c0c0e;
+}
+@media (max-width: 992px) {
+  .modal-city__title {
+    padding: 0 20px;
+    font-size: 22px;
+  }
+}
+@media (max-width: 576px) {
+  .modal-city__title {
+    padding: 0 16px;
+    margin: 0 0 20px;
+    font-size: 18px;
+  }
+}
+.modal-city__search {
+  flex: 1 1 auto;
+  max-width: 900px;
+  margin: 0 auto 30px;
+}
+@media (max-width: 576px) {
+  .modal-city__search {
+    margin: 0 auto 20px;
+  }
+}
+.modal-city__search::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: none;
+  cursor: pointer;
+}
+.modal-city__search.active::before {
+  display: block;
+}
+@media (max-width: 680px) {
+  .modal-city__search {
+    flex: 1 1 100%;
+    order: 100;
+  }
+}
+.modal-city__search-form {
+  position: relative;
+}
+.modal-city__search-form-input {
+  display: block;
+  width: 100%;
+  padding: 13px 56px 13px 20px;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #0c0c0e;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  outline: none;
+}
+@media (max-width: 992px) {
+  .modal-city__search-form-input {
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .modal-city__search-form-input {
+    padding: 10px 46px 10px 15px;
+    font-size: 13px;
+  }
+}
+.modal-city__search-form-input::-moz-placeholder {
+  color: #cccccc;
+}
+.modal-city__search-form-input::placeholder {
+  color: #cccccc;
+}
+.modal-city__search-form-input::-webkit-search-decoration, .modal-city__search-form-input::-webkit-search-cancel-button, .modal-city__search-form-input::-webkit-search-results-button, .modal-city__search-form-input::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+.modal-city__search-form-button {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  bottom: 7px;
+  display: block;
+  aspect-ratio: 1/1;
+  padding: 0;
+  aspect-ratio: 1/1;
+  border: none;
+  background: url(../assets/search_icon.svg) center/16px no-repeat;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .modal-city__search-form-button {
+    top: 3px;
+    bottom: 3px;
+  }
+}
+.modal-city__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 900px;
+  margin: 0 auto 30px;
+  padding: 0;
+  list-style-type: none;
+}
+@media (max-width: 576px) {
+  .modal-city__list {
+    margin: 0 0 20px;
+  }
+}
+.modal-city__list-item {
+  padding: 13px 20px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  color: #0c0c0e;
+  border: 1px solid rgba(12, 12, 14, 0.2);
+  border-radius: 10px;
+  background-color: #f4f4f4;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .modal-city__list-item {
+    font-size: 13px;
+  }
+}
+@media (max-width: 576px) {
+  .modal-city__list-item {
+    padding: 11px 12px;
+    font-size: 12px;
+  }
+}
+.modal-city__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.modal-city__controls-forward, .modal-city__controls-back {
+  flex: 0 0 auto;
+  display: inline-block;
+  padding: 13px 22px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  color: #0c0c0e;
+  border: 1px solid #0c0c0e;
+  border-radius: 10px;
+  background: #f4f4f4;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .modal-city__controls-forward, .modal-city__controls-back {
+    padding: 12px 13px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .modal-city__controls-forward, .modal-city__controls-back {
+    padding: 12px 13px;
+    font-size: 11px;
+  }
+}
+.modal-city__controls-forward:hover, .modal-city__controls-back:hover {
+  color: #ffffff;
+  background-color: #0c0c0e;
+}
+.modal-city__controls-forward:disabled, .modal-city__controls-back:disabled {
+  opacity: 0.5;
+}
+.modal-city__controls-info {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #0c0c0e;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .modal-city__controls-info {
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .modal-city__controls-info {
+    font-size: 12px;
+  }
+}

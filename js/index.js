@@ -80,6 +80,7 @@ searchResultCards.forEach((card) => {
 const modals = {
   basket: 'modal-basket',
   order: 'modal-order',
+  city: 'modal-city',
 };
 
 const modalElements = document.querySelectorAll('.modal');
@@ -106,6 +107,11 @@ const headerBasketButton = document.querySelector('.header__basket-button');
 
 if (headerBasketButton)
   headerBasketButton.addEventListener('click', () => openModal(modals.basket));
+
+const chooseCityButton = document.querySelector('.header__location-modal-buttons-choose');
+
+if (chooseCityButton)
+  chooseCityButton.addEventListener('click', () => openModal(modals.city));
 
 const basketOrderButton = document.querySelector('.modal-basket__controls-order');
 

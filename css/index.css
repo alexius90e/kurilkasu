@@ -927,15 +927,18 @@ img {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  margin: 60px 0;
 }
 @media (max-width: 992px) {
   .search-result__content {
     gap: 30px;
+    margin: 40px 0;
   }
 }
 @media (max-width: 576px) {
   .search-result__content {
     gap: 20px;
+    margin: 30px 0;
   }
 }
 .search-result__card {
@@ -1300,4 +1303,88 @@ img {
 }
 .search-result__card-info-bottom-basket-button:hover::before {
   filter: brightness(100%);
+}
+
+.pages-nav__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.pages-nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 48px;
+  aspect-ratio: 1/1;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  color: #858586;
+  border-radius: 48px;
+  background-color: #ffffff;
+  transition-property: background-color, color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .pages-nav__link {
+    width: 40px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 576px) {
+  .pages-nav__link {
+    width: 38px;
+  }
+}
+.pages-nav__link:hover {
+  color: #ffffff;
+  background-color: #d31d1d;
+}
+.pages-nav__link.active {
+  color: #ffffff;
+  background-color: #d31d1d;
+}
+.pages-nav__link_prev::before, .pages-nav__link_next::before {
+  content: "";
+  display: block;
+  width: 12px;
+  aspect-ratio: 1/1;
+  background: url(../assets/arrow-up-icon.svg) center/cover no-repeat;
+  transition-property: filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+@media (max-width: 992px) {
+  .pages-nav__link_prev::before, .pages-nav__link_next::before {
+    width: 6px;
+  }
+}
+.pages-nav__link_prev:hover::before, .pages-nav__link_next:hover::before {
+  filter: brightness(1000%);
+}
+.pages-nav__link_prev {
+  transform: rotate(180deg);
+}
+.pages-nav__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  color: #0c0c0e;
+}
+@media (max-width: 992px) {
+  .pages-nav__divider {
+    font-size: 14px;
+  }
 }

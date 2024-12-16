@@ -17,3 +17,16 @@ if (headerSearch && headerSearchInput) {
     }
   });
 }
+
+const headerBurger = document.querySelector('.header__burger');
+
+if (headerBurger) {
+  headerBurger.addEventListener('click', (event) => {
+    console.log('header__burger')
+    const isLayout = event.currentTarget === event.target;
+    const isButton = event.target.classList.contains('header__burger-button');
+
+    if (isLayout) headerBurger.classList.remove('active');
+    if (isButton) headerBurger.classList.toggle('active');
+  });
+}

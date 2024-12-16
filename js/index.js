@@ -79,6 +79,7 @@ searchResultCards.forEach((card) => {
 
 const modals = {
   basket: 'modal-basket',
+  order: 'modal-order',
 };
 
 const modalElements = document.querySelectorAll('.modal');
@@ -105,3 +106,17 @@ const headerBasketButton = document.querySelector('.header__basket-button');
 
 if (headerBasketButton)
   headerBasketButton.addEventListener('click', () => openModal(modals.basket));
+
+const basketOrderButton = document.querySelector('.modal-basket__controls-order');
+
+if (basketOrderButton) basketOrderButton.addEventListener('click', () => {
+  closeModal(modals.basket)
+  openModal(modals.order)
+});
+
+const orderSubmitButton = document.querySelector('.modal-order__form-submit-button');
+
+if (orderSubmitButton) orderSubmitButton.addEventListener('click', () => {
+  closeModal(modals.order)
+  // openModal(modals.order)
+});

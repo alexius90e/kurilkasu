@@ -600,5 +600,217 @@
         <div class="modal__close" role="button"></div>
       </div>
     </div>
+
+    <div class="modal modal-order">
+      <div class="modal__body">
+        <div class="modal__content">
+          <h3 class="modal-order__title">Оформление заказа</h3>
+
+          <div class="modal-order__notification">
+            <div class="modal-order__notification-item modal-order__notification-item_alarm">
+              <div class="modal-order__notification-item-text">
+                Уведомление - это юридическое понятие, описывающее требование о том, чтобы сторона
+                была осведомлена о судебном процессе, затрагивающем их права, обязанности.
+              </div>
+            </div>
+
+            <div class="modal-order__notification-item modal-order__notification-item_warning">
+              <div class="modal-order__notification-item-text">
+                Уведомление - это юридическое понятие, описывающее требование о том, чтобы сторона
+                была осведомлена о судебном процессе, затрагивающем их права, обязанности.
+              </div>
+            </div>
+
+            <div class="modal-order__notification-item modal-order__notification-item_success">
+              <div class="modal-order__notification-item-text">
+                Уведомление - это юридическое понятие, описывающее требование о том, чтобы сторона
+                была осведомлена о судебном процессе, затрагивающем их права, обязанности.
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-order__list">
+            <div class="modal-order__list-item">
+              <figure class="modal-order__list-item-figure">
+                <img
+                  class="modal-order__list-item-figure-image"
+                  src="./assets/cigarette-1.webp"
+                  alt="cigarette"
+                />
+              </figure>
+
+              <div class="modal-order__list-item-info">
+                <div class="modal-order__list-item-info-name">Сигареты Хортица Красная</div>
+                <div class="modal-order__list-item-info-price">75.00 руб.</div>
+                <div class="modal-order__list-item-info-controls">
+                  <div class="modal-order__list-item-info-quantity">
+                    <button class="modal-order__list-item-info-quantity-minus">-</button>
+                    <span class="modal-order__list-item-info-quantity-count">10</span>
+                    <button class="modal-order__list-item-info-quantity-plus">+</button>
+                  </div>
+
+                  <button class="modal-order__list-item-info-delete">Удалить</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-order__list-item">
+              <figure class="modal-order__list-item-figure">
+                <img
+                  class="modal-order__list-item-figure-image"
+                  src="./assets/cigarette-3.webp"
+                  alt="cigarette"
+                />
+              </figure>
+
+              <div class="modal-order__list-item-info">
+                <div class="modal-order__list-item-info-name">
+                  Сигареты Lucky Strike Compact Bright
+                </div>
+                <div class="modal-order__list-item-info-price">75.00 руб.</div>
+                <div class="modal-order__list-item-info-controls">
+                  <div class="modal-order__list-item-info-quantity">
+                    <button class="modal-order__list-item-info-quantity-minus">-</button>
+                    <span class="modal-order__list-item-info-quantity-count">10</span>
+                    <button class="modal-order__list-item-info-quantity-plus">+</button>
+                  </div>
+
+                  <button class="modal-order__list-item-info-delete">Удалить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-order__info">
+            <div class="modal-order__info-count">Количество: 20</div>
+            <div class="modal-order__info-total">Итого: 1 450 руб.</div>
+          </div>
+
+          <form class="modal-order__form">
+            <fieldset class="modal-order__form-fieldset">
+              <label class="modal-order__form-item">
+                <input
+                  class="modal-order__form-item-input"
+                  type="text"
+                  name="name"
+                  placeholder="Имя"
+                  required
+                />
+                <span class="modal-order__form-item-warning">Введите ваше имя!</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="modal-order__form-fieldset">
+              <label class="modal-order__form-item">
+                <input
+                  class="modal-order__form-item-input"
+                  type="text"
+                  name="surname"
+                  placeholder="Фамилия"
+                  required
+                />
+                <span class="modal-order__form-item-warning">Введите вашу фамилию!</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="modal-order__form-fieldset">
+              <label class="modal-order__form-item">
+                <input
+                  class="modal-order__form-item-input"
+                  type="text"
+                  name="address"
+                  placeholder="Адрес"
+                  required
+                />
+                <span class="modal-order__form-item-warning">Введите адрес!</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="modal-order__form-fieldset">
+              <label class="modal-order__form-item">
+                <textarea
+                  class="modal-order__form-item-textarea"
+                  name="comment"
+                  placeholder="Комментарий"
+                ></textarea>
+              </label>
+            </fieldset>
+
+            <fieldset class="modal-order__form-fieldset">
+              <label class="modal-order__form-item">
+                <input
+                  class="modal-order__form-item-input modal-order__form-item-input_social"
+                  type="text"
+                  name="social"
+                  placeholder="Email"
+                  required
+                />
+                <span class="modal-order__form-item-warning modal-order__form-item-warning"
+                  >Введите адрес!</span
+                >
+              </label>
+            </fieldset>
+
+            <fieldset class="modal-order__form-fieldset modal-order__form-social">
+              <label class="modal-order__form-social-radio">
+                <input
+                  class="modal-order__form-social-radio-input"
+                  type="radio"
+                  name="socialType"
+                  value="Телефон"
+                />
+                <span class="modal-order__form-social-radio-text">Телефон</span>
+              </label>
+              <label class="modal-order__form-social-radio">
+                <input
+                  class="modal-order__form-social-radio-input"
+                  type="radio"
+                  name="socialType"
+                  value="Email"
+                  checked
+                />
+                <span class="modal-order__form-social-radio-text">Email</span>
+              </label>
+              <label class="modal-order__form-social-radio">
+                <input
+                  class="modal-order__form-social-radio-input"
+                  type="radio"
+                  name="socialType"
+                  value="Telegram"
+                />
+                <span class="modal-order__form-social-radio-text">Telegram</span>
+              </label>
+              <label class="modal-order__form-social-radio">
+                <input
+                  class="modal-order__form-social-radio-input"
+                  type="radio"
+                  name="socialType"
+                  value="WhatsApp"
+                />
+                <span class="modal-order__form-social-radio-text">WhatsApp</span>
+              </label>
+              <label class="modal-order__form-social-radio">
+                <input
+                  class="modal-order__form-social-radio-input"
+                  type="radio"
+                  name="socialType"
+                  value="Viber"
+                />
+                <span class="modal-order__form-social-radio-text">Viber</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="modal-order__form-submit">
+              <div class="modal-order__form-submit-disclaimer">
+                Минимальная сумма заказа: 5000 руб.
+              </div>
+              <button class="modal-order__form-submit-button">Оформить заказ</button>
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="modal__close" role="button"></div>
+      </div>
+    </div>
   </body>
 </html>

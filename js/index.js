@@ -1,3 +1,5 @@
+import './custom-select.js';
+
 const headerSearch = document.querySelector('.header__search');
 const headerSearchInput = document.querySelector('.header__search-form-input');
 

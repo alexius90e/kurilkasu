@@ -81,6 +81,7 @@ const modals = {
   basket: 'modal-basket',
   order: 'modal-order',
   city: 'modal-city',
+  thanks: 'modal-thanks',
 };
 
 const modalElements = document.querySelectorAll('.modal');
@@ -124,5 +125,5 @@ const orderSubmitButton = document.querySelector('.modal-order__form-submit-butt
 
 if (orderSubmitButton) orderSubmitButton.addEventListener('click', () => {
   closeModal(modals.order)
-  // openModal(modals.order)
+  openModal(modals.thanks)
 });

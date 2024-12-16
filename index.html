@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title</title>
+    <title>Купить сигареты</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -820,7 +820,11 @@
 
           <div class="modal-city__search">
             <div class="modal-city__search-form">
-              <input class="modal-city__search-form-input" type="search" placeholder="Поиск города" />
+              <input
+                class="modal-city__search-form-input"
+                type="search"
+                placeholder="Поиск города"
+              />
               <button class="modal-city__search-form-button"></button>
             </div>
           </div>
@@ -847,6 +851,38 @@
             <button class="modal-city__controls-back" disabled>Назад</button>
             <span class="modal-city__controls-info">Страница 1 из 12</span>
             <button class="modal-city__controls-forward">Вперед</button>
+          </div>
+        </div>
+
+        <div class="modal__close" role="button"></div>
+      </div>
+    </div>
+
+    <div class="modal modal-thanks">
+      <div class="modal__body">
+        <div class="modal__content">
+          <figure class="modal-thanks__figure">
+            <img class="modal-thanks__figure-image" src="./assets/cart.svg" alt="cart" />
+          </figure>
+
+          <h3 class="modal-thanks__title">Выберите город</h3>
+
+          <p class="modal-thanks__order">
+            Ваш заказ №17182 на общую сумму 5650.00 руб. успешно оформлен.
+          </p>
+
+          <label class="modal-thanks__agreement">
+            <input type="checkbox" checked />
+            <div class="modal-thanks__agreement-text">
+              Я прочитал(а)
+              <a class="modal-thanks__agreement-text-link" href="#">отзывы и правила</a> и
+              согласен(а) с предоплатой
+            </div>
+          </label>
+
+          <div class="modal-thanks__manager">
+            Свяжитесь с <a class="modal-thanks__manager-link" href="#">менеджером</a> и сообщите ему
+            ваш номер заказа.
           </div>
         </div>
 

@@ -131,6 +131,22 @@
     flex: 0 0 auto;
     max-width: 180px;
 
+    &::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 100;
+      display: none;
+      cursor: pointer;
+    }
+
+    &.active::before {
+      display: block;
+    }
+
     @include laptop {
       max-width: 162px;
     }
@@ -185,9 +201,110 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        pointer-events: none;
 
         @include laptop {
           max-width: calc(100% - 22px);
+        }
+      }
+    }
+
+    &-modal {
+      position: absolute;
+      top: calc(100% + 15px);
+      left: -32px;
+      z-index: 500;
+      display: none;
+      width: max-content;
+      padding: 30px 35px;
+      box-sizing: border-box;
+      overflow: hidden;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 25px;
+      box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.15);
+      background: #ffffff;
+
+      @include mobile {
+        padding: 25px;
+      }
+
+      .active & {
+        display: block;
+      }
+
+      &-city {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 25px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        color: #0c0c0e;
+
+        @include mobile {
+          font-size: 13px;
+          margin: 0 0 15px;
+        }
+
+        &::before {
+          content: '';
+          flex: 0 0 auto;
+          display: block;
+          width: 22px;
+          padding: 0;
+          aspect-ratio: 1 / 1;
+          border: none;
+          background: url(../assets/geo.svg) center / cover no-repeat;
+
+          @include laptop {
+            width: 16px;
+          }
+        }
+      }
+
+      &-buttons {
+        display: flex;
+        gap: 10px;
+
+        &-ok,
+        &-choose {
+          flex: 0 0 auto;
+          padding: 13px 20px;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 100%;
+          border-radius: 40px;
+          transition-property: color, border-color, background-color;
+          transition-timing-function: ease-in-out;
+          transition-duration: 0.2s;
+          cursor: pointer;
+
+          @include mobile {
+            padding: 10px 14px;
+            font-size: 13px;
+          } 
+        }
+
+        &-ok {
+          color: #ffffff;
+          border: 1px solid #d31d1d;
+          background-color: #d31d1d;
+
+          &:hover {
+            color: #d31d1d;
+            background-color: #ffffff;
+          }
+        }
+
+        &-choose {
+          color: #0c0c0e;
+          border: 1px solid rgba(0, 0, 0, 0.12);
+          background-color: #ffffff;
+
+          &:hover {
+            border-color: #0c0c0e;
+          }
         }
       }
     }

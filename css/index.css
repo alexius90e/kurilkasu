@@ -176,6 +176,20 @@ img {
   flex: 0 0 auto;
   max-width: 180px;
 }
+.header__location::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: none;
+  cursor: pointer;
+}
+.header__location.active::before {
+  display: block;
+}
 @media (max-width: 992px) {
   .header__location {
     max-width: 162px;
@@ -232,11 +246,106 @@ img {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  pointer-events: none;
 }
 @media (max-width: 992px) {
   .header__location-button-city {
     max-width: calc(100% - 22px);
   }
+}
+.header__location-modal {
+  position: absolute;
+  top: calc(100% + 15px);
+  left: -32px;
+  z-index: 500;
+  display: none;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 30px 35px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 25px;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+}
+@media (max-width: 576px) {
+  .header__location-modal {
+    padding: 25px;
+  }
+}
+.active .header__location-modal {
+  display: block;
+}
+.header__location-modal-city {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 25px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #0c0c0e;
+}
+@media (max-width: 576px) {
+  .header__location-modal-city {
+    font-size: 13px;
+    margin: 0 0 15px;
+  }
+}
+.header__location-modal-city::before {
+  content: "";
+  flex: 0 0 auto;
+  display: block;
+  width: 22px;
+  padding: 0;
+  aspect-ratio: 1/1;
+  border: none;
+  background: url(../assets/geo.svg) center/cover no-repeat;
+}
+@media (max-width: 992px) {
+  .header__location-modal-city::before {
+    width: 16px;
+  }
+}
+.header__location-modal-buttons {
+  display: flex;
+  gap: 10px;
+}
+.header__location-modal-buttons-ok, .header__location-modal-buttons-choose {
+  flex: 0 0 auto;
+  padding: 13px 20px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  border-radius: 40px;
+  transition-property: color, border-color, background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .header__location-modal-buttons-ok, .header__location-modal-buttons-choose {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+}
+.header__location-modal-buttons-ok {
+  color: #ffffff;
+  border: 1px solid #d31d1d;
+  background-color: #d31d1d;
+}
+.header__location-modal-buttons-ok:hover {
+  color: #d31d1d;
+  background-color: #ffffff;
+}
+.header__location-modal-buttons-choose {
+  color: #0c0c0e;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
+}
+.header__location-modal-buttons-choose:hover {
+  border-color: #0c0c0e;
 }
 .header__search {
   flex: 1 1 auto;

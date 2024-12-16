@@ -11,6 +11,7 @@
   }
 
   & .container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,6 +24,10 @@
     @include tabletsm {
       flex-wrap: wrap;
       gap: 15px 20px;
+    }
+
+    @include mobilesm {
+      gap: 15px;
     }
   }
 
@@ -123,6 +128,22 @@
   &__search {
     flex: 1 1 auto;
 
+    &::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 100;
+      display: none;
+      cursor: pointer;
+    }
+
+    &.active::before {
+      display: block;
+    }
+
     @include tabletsm {
       flex: 1 1 100%;
       order: 100;
@@ -181,6 +202,137 @@
         @include mobile {
           top: 3px;
           bottom: 3px;
+        }
+      }
+    }
+
+    &-results {
+      position: absolute;
+      top: calc(100% + 5px);
+      left: 50%;
+      z-index: 500;
+      display: none;
+      padding: 15px 0px;
+      max-height: calc(100dvh - 240px);
+      max-width: calc(100% - 24px);
+      width: 454px;
+      box-sizing: border-box;
+      overflow: auto;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 25px;
+      background-color: #ffffff;
+      box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.15);
+      transform: translate3d(-50%, 0, 0);
+
+      @include mobile {
+        padding: 10px 0;
+      }
+
+      .active & {
+        display: block;
+      }
+
+      &-list {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+
+        &-item {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          padding: 15px 25px;
+          transition: background-color ease-in-out 0.2s;
+          cursor: pointer;
+
+          @include laptop {
+          }
+
+          @include mobile {
+            padding: 15px 20px;
+          }
+
+          &:hover {
+            background-color: rgba($color: #0c0c0e, $alpha: 0.05);
+          }
+
+          &-figure {
+            display: block;
+            width: 42px;
+            aspect-ratio: 1 / 1;
+            background-color: #ffffff;
+
+            @include laptop {
+              width: 38px;
+            }
+
+            &-image {
+              display: block;
+              max-width: 100%;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          &-info {
+            & > * {
+              font-size: 16px;
+              line-height: 100%;
+              color: #0c0c0e;
+
+              @include laptop {
+                font-size: 14px;
+              }
+
+              @include mobile {
+                font-size: 13px;
+              }
+            }
+
+            &-name {
+              margin: 0 0 10px;
+              font-weight: 600;
+
+              @include mobile {
+                margin: 0 0 8px;
+              }
+            }
+
+            &-price {
+              font-weight: 400;
+            }
+          }
+        }
+      }
+
+      &-all {
+        padding: 15px 25px;
+
+        @include laptop {
+          padding: 15px 20px;
+        }
+
+        &-button {
+          padding: 0;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 100%;
+          text-decoration: underline;
+          text-decoration-skip-ink: none;
+          color: #0c0c0e;
+          border: none;
+          background: none;
+          transition: all ease-in-out 0.2s;
+          cursor: pointer;
+
+          @include laptop {
+            font-size: 14px;
+          }
+
+          &:hover {
+            color: #d31d1d;
+          }
         }
       }
     }

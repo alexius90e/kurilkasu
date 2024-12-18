@@ -1310,20 +1310,25 @@ img {
 }
 .search-result__card-info-bottom-quantity-count {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 0 13px;
+  max-width: 44px;
+  width: 100%;
+  padding: 0 4px;
   height: 30px;
   box-sizing: border-box;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
+  text-align: center;
   color: #0c0c0e;
   border: 1px solid #d31d1d;
   border-left: none;
   border-right: none;
+  outline: none;
+  -moz-appearance: textfield;
+}
+.search-result__card-info-bottom-quantity-count::-webkit-outer-spin-button, .search-result__card-info-bottom-quantity-count::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .search-result__card-info-bottom-quantity-minus, .search-result__card-info-bottom-quantity-plus {
   display: flex;
@@ -1720,20 +1725,25 @@ img {
 }
 .modal-basket__list-item-info-quantity-count {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 0 13px;
+  max-width: 44px;
+  width: 100%;
+  padding: 0 4px;
   height: 30px;
   box-sizing: border-box;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
+  text-align: center;
   color: #0c0c0e;
   border: 1px solid #d31d1d;
   border-left: none;
   border-right: none;
+  outline: none;
+  -moz-appearance: textfield;
+}
+.modal-basket__list-item-info-quantity-count::-webkit-outer-spin-button, .modal-basket__list-item-info-quantity-count::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .modal-basket__list-item-info-quantity-minus, .modal-basket__list-item-info-quantity-plus {
   display: flex;
@@ -2050,20 +2060,25 @@ img {
 }
 .modal-order__list-item-info-quantity-count {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 0 13px;
+  max-width: 44px;
+  width: 100%;
+  padding: 0 4px;
   height: 30px;
   box-sizing: border-box;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
+  text-align: center;
   color: #0c0c0e;
   border: 1px solid #d31d1d;
   border-left: none;
   border-right: none;
+  outline: none;
+  -moz-appearance: textfield;
+}
+.modal-order__list-item-info-quantity-count::-webkit-outer-spin-button, .modal-order__list-item-info-quantity-count::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .modal-order__list-item-info-quantity-minus, .modal-order__list-item-info-quantity-plus {
   display: flex;

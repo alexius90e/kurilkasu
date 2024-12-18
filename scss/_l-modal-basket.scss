@@ -116,24 +116,26 @@
 
           &-count {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            width: fit-content;
-            padding: 0 13px;
+            max-width: 44px;
+            width: 100%;
+            padding: 0 4px;
             height: 30px;
             box-sizing: border-box;
             font-weight: 400;
             font-size: 16px;
             line-height: 150%;
+            text-align: center;
             color: #0c0c0e;
             border: 1px solid #d31d1d;
             border-left: none;
             border-right: none;
+            outline: none;
+            -moz-appearance: textfield;
 
-            @include laptop {
-            }
-
-            @include mobile {
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
             }
           }
 

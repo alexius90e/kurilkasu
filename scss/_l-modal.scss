@@ -44,7 +44,6 @@
 
   &__content {
     max-height: calc(100dvh - 140px);
-    padding-right: 10px;
     overflow: auto;
 
     @include laptop {
@@ -56,15 +55,41 @@
     }
 
     &::-webkit-scrollbar {
-      width: 6px;
+      width: 44px;
+
+      @include laptop {
+        width: 34px;
+      }
+
+      @include mobile {
+        width: 16px;
+      }
     }
 
     &::-webkit-scrollbar-track {
-      background: #f1f1f1;
+      border-left: 40px solid #ffffff;
+      background: #fbe9e9;
+
+      @include laptop {
+        border-left-width: 30px;
+      }
+
+      @include mobile {
+        border-left-width: 12px;
+      }
     }
 
     &::-webkit-scrollbar-thumb {
-      background: #777777;
+      border-left: 40px solid #ffffff;
+      background: #d31d1d;
+
+      @include laptop {
+        border-left-width: 30px;
+      }
+
+      @include mobile {
+        border-left-width: 12px;
+      }
     }
   }
 

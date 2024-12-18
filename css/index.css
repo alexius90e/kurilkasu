@@ -192,9 +192,9 @@ img {
     gap: 15px 20px;
   }
 }
-@media (max-width: 359.9px) {
+@media (max-width: 576px) {
   .header .container {
-    gap: 15px;
+    gap: 15px 10px;
   }
 }
 .header__burger {
@@ -719,6 +719,11 @@ img {
     width: 14px;
   }
 }
+@media (max-width: 576px) {
+  .header__basket-button::before {
+    margin: 0;
+  }
+}
 .header__basket-button:hover::before {
   filter: brightness(100%);
 }
@@ -732,30 +737,44 @@ img {
     display: none;
   }
 }
-.header__telegram {
+.header__social {
+  display: flex;
+  align-items: center;
   flex: 0 0 auto;
+  gap: 6px;
 }
-.header__telegram-link {
+@media (max-width: 576px) {
+  .header__social {
+    gap: 4px;
+  }
+}
+.header__social-link {
+  flex: 0 0 auto;
   display: block;
   width: 50px;
   aspect-ratio: 1/1;
-  background: url(../assets/telegram-logo.svg) center/cover no-repeat;
   transition: filter ease-in-out 0.2s;
   filter: grayscale(100%);
   cursor: pointer;
 }
 @media (max-width: 992px) {
-  .header__telegram-link {
-    width: 42px;
+  .header__social-link {
+    width: 36px;
   }
 }
 @media (max-width: 576px) {
-  .header__telegram-link {
-    width: 34px;
+  .header__social-link {
+    width: 26px;
   }
 }
-.header__telegram-link:hover {
+.header__social-link:hover {
   filter: grayscale(0%);
+}
+.header__social-link_telegram {
+  background: url(../assets/telegram-logo.svg) center/cover no-repeat;
+}
+.header__social-link_whatsapp {
+  background: url(../assets/whatsapp.svg) center/cover no-repeat;
 }
 
 .main {
@@ -1667,6 +1686,11 @@ img {
   border-radius: 25px;
   background: rgba(12, 12, 14, 0.03);
 }
+@media (max-width: 992px) {
+  .modal-basket__empty {
+    padding: 20px;
+  }
+}
 @media (max-width: 576px) {
   .modal-basket__empty {
     gap: 10px;
@@ -1682,6 +1706,11 @@ img {
   width: 70px;
   height: auto;
 }
+@media (max-width: 992px) {
+  .modal-basket__empty-figure-image {
+    width: 50px;
+  }
+}
 .modal-basket__empty-info {
   display: flex;
   flex-direction: column;
@@ -1692,6 +1721,22 @@ img {
   font-size: 20px;
   line-height: 100%;
   color: #0c0c0e;
+}
+@media (max-width: 992px) {
+  .modal-basket__empty-info-title {
+    font-size: 16px;
+  }
+}
+.modal-basket__empty-info-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  color: #0c0c0e;
+}
+@media (max-width: 992px) {
+  .modal-basket__empty-info-text {
+    font-size: 12px;
+  }
 }
 .modal-basket__list {
   display: flex;

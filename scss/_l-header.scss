@@ -26,8 +26,8 @@
       gap: 15px 20px;
     }
 
-    @include mobilesm {
-      gap: 15px;
+    @include mobile {
+      gap: 15px 10px;
     }
   }
 
@@ -283,7 +283,7 @@
           @include mobile {
             padding: 10px 14px;
             font-size: 13px;
-          } 
+          }
         }
 
         &-ok {
@@ -576,6 +576,10 @@
         @include laptop {
           width: 14px;
         }
+
+        @include mobile {
+          margin: 0;
+        }
       }
 
       &:hover::before {
@@ -596,28 +600,44 @@
     }
   }
 
-  &__telegram {
+  &__social {
+    display: flex;
+    align-items: center;
     flex: 0 0 auto;
+    gap: 6px;
+
+    @include mobile {
+      gap: 4px;
+    }
 
     &-link {
+      flex: 0 0 auto;
       display: block;
       width: 50px;
       aspect-ratio: 1 / 1;
-      background: url(../assets/telegram-logo.svg) center / cover no-repeat;
+
       transition: filter ease-in-out 0.2s;
       filter: grayscale(100%);
       cursor: pointer;
 
       @include laptop {
-        width: 42px;
+        width: 36px;
       }
 
       @include mobile {
-        width: 34px;
+        width: 26px;
       }
 
       &:hover {
         filter: grayscale(0%);
+      }
+
+      &_telegram {
+        background: url(../assets/telegram-logo.svg) center / cover no-repeat;
+      }
+
+      &_whatsapp {
+        background: url(../assets/whatsapp.svg) center / cover no-repeat;
       }
     }
   }

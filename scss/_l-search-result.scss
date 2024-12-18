@@ -119,8 +119,8 @@
 
           &-bullet {
             display: block;
-            width: 18px;
-            height: 18px;
+            width: 8px;
+            height: 8px;
             margin: 0 !important;
             border: 1px solid #d31d1d;
             border-radius: 20px;
@@ -128,8 +128,8 @@
             opacity: 1;
 
             @include laptop {
-              width: 10px;
-              height: 10px;
+              width: 6px;
+              height: 6px;
             }
 
             &-active {
@@ -202,7 +202,6 @@
           font-weight: 400;
           font-size: 14px;
           line-height: 150%;
-          color: #0c0c0e;
           border-bottom: 1px solid #d9d9d9;
 
           @include laptop {
@@ -217,12 +216,13 @@
 
           &-name {
             flex: 1 1 auto;
+            color: #0c0c0e;
           }
 
           &-value {
+            color: #858586;
             text-decoration: underline;
             text-decoration-skip-ink: none;
-            opacity: 0.5;
           }
         }
       }

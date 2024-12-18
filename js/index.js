@@ -138,3 +138,26 @@ window.addEventListener('scroll', () => {
     if (backLink) backLink.classList.add('hidden');
   }
 });
+
+///
+
+const searchResultCardInfoNameElems = document.querySelectorAll('.search-result__card-info-name');
+
+searchResultCardInfoNameElems.forEach((elem) => {
+  elem.addEventListener('click', (event) => {
+    const isMoreButton = event.target.classList.contains('search-result__card-info-name-more');
+
+    if (isMoreButton) event.currentTarget.classList.toggle('active');
+  });
+});
+
+const searchResultCardListElems = document.querySelectorAll('.search-result__card-info-list');
+
+searchResultCardListElems.forEach((elem) => {
+  elem.addEventListener('click', (event) => {
+    console.log('max-height')
+    const isMoreButton = event.target.classList.contains('search-result__card-info-list-more');
+
+    if (isMoreButton) event.currentTarget.classList.toggle('active');
+  });
+});
